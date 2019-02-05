@@ -100,8 +100,8 @@ public class GamePaneBuilder implements PaneBuilder {
 		for (List<GameRectangle> list : gameRectangles) {
 			for (GameRectangle rect : list) {
 				StackPane stack = new StackPane(rect);
-				stack.setLayoutX(rect.getRow()*20);
-				stack.setLayoutY(rect.getColumn()*20);
+				stack.setLayoutX(rect.getColumn()*20);
+				stack.setLayoutY(rect.getRow()*20);
 				pane.getChildren().add(stack);
 			}
 		}

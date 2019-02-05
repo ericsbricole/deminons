@@ -56,10 +56,10 @@ public enum Router {
 	private void setWindowTitle(String target) {
 		switch(target) {
 		case "setup":
-			stage.setTitle("Préparation de la partie");
+			stage.setTitle("PrÃ©paration de la partie");
 			break;
 		case "game":
-			stage.setTitle("Déminons");
+			stage.setTitle("DÃ©minons");
 		}
 	}
 

@@ -1,28 +1,38 @@
 /* 
     Document   : deminons
 */
-
 .hiddenRect {
-	-fx-fill: gray;
-	-fx-stroke: black;
-	-fx-stroke-width: 2;
-}
-.test {
-	-fx-fill: blue;
-	-fx-stroke: black;
-	-fx-stroke-width: 5;
+	-fx-fill: #BBBBBB;
+	-fx-stroke: #444444;
+	-fx-stroke-width: 1;
 }
 .marked{
-	-fx-fill: blue;
-	-fx-stroke: black;
-	-fx-stroke-width: 2;
+	-fx-fill: gainsboro;
+	-fx-stroke: #444444;
+	-fx-stroke-width: 1;
 }
 .seen{
 	-fx-fill: gainsboro;
-	-fx-stroke: black;
-	-fx-stroke-width: 2;
+	-fx-stroke: #444444;
+	-fx-stroke-width: 1;
 	}
 .entered{
-	-fx-stroke: black;
-	-fx-stroke-width: 4;
+	-fx-border-color:black;
+	-fx-border-width: 2
 	}
+.setupLabel{
+    -fx-background-color: #CCCCCC;
+    -fx-background-radius: 8px;
+    -fx-label-padding: 8px;
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );
+}
+.setupField{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 4, 0.0 , 0 , 2 );
+}
+
+#welcome{
+	-fx-fill: #AAAAAA;
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );
+}

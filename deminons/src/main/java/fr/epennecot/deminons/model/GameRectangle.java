@@ -2,7 +2,11 @@ package fr.epennecot.deminons.model;
 
 import java.util.Objects;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
 public class GameRectangle extends Rectangle {
 
@@ -11,10 +15,11 @@ public class GameRectangle extends Rectangle {
 	private boolean marked;
 	private int column;
 	private int row;
+	private StackPane backgroung;
 	public GameRectangle() {
 		super();
 	}
-
+	
 	public GameRectangle(int x, int y, int width, int height, boolean isABomb) {
 		super(x,y,width,height);
 		this.isABomb = isABomb;
@@ -60,6 +65,14 @@ public class GameRectangle extends Rectangle {
 		this.row = row;
 	}
 
+	public StackPane getBackgroung() {
+		return backgroung;
+	}
+	
+	public void setBackgroung(StackPane backgroung) {
+		this.backgroung = backgroung;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof GameRectangle))
@@ -72,5 +85,6 @@ public class GameRectangle extends Rectangle {
 	public int hashCode() {
 		return Objects.hash(column, row);
 	}
+
 
 }

@@ -12,18 +12,20 @@ public enum PaneBuilderFactory {
 	public PaneBuilder build(String target) {
 		PaneBuilder paneBuilder = cache.get(target);
 		if (paneBuilder == null) {
-			paneBuilder = doBuild(target);
+			paneBuilder = getBuilder(target);
 			cache.put(target, paneBuilder);
 		}
 		return paneBuilder;
 	}
 	
-	private PaneBuilder doBuild(String target) {
+	private PaneBuilder getBuilder(String target) {
 		PaneBuilder paneBuilder = null;
 		switch(target) {
 		case "game":
 			paneBuilder = new GamePaneBuilder();
 			break;
+		case "setup":
+			paneBuilder = new SetupPaneBuilder();
 		}
 		return paneBuilder;
 	}
